@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tsukio</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <container class="container">    
+        <nav class="navigation">
+            <ul>
+                <li id="logo" class="tooltip"><span class="tooltiptext">Tsukio home</span><a href="#">
+                    <img src="./Tsukio cyclone.PNG" height="35px" width="35px"></a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+        <tabs class="tabs">
+            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Event information</a>
+                &nbsp &nbsp &nbsp &nbsp<span>|</span> &nbsp &nbsp &nbsp &nbsp
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#" role="tab" aria-controls="nav-profile" aria-selected="false">Levels - Divisions - Age groups</a>&nbsp &nbsp &nbsp &nbsp
+                <span>|</span>&nbsp &nbsp &nbsp &nbsp
+                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#" role="tab" aria-controls="nav-contact" aria-selected="false">Other key information</a>
+            </div>
+            <!--<ul>
+                <li><a href="#">Event information</a></li>
+                <li><a href="#">Levels-Divisions-Age Groups</a></li>
+                <li><a href="#">Other key information</a></li>
+            </ul>-->
+        </tabs>
+        <menu class="sidebar">
+            <div>
+                <!--<img src="./home logo.png" height="20px" width="20px">--> <p id="eventhome">Dashboard</p><br>
+                <p>Created event</p>
+                <p class="divider">|<br>|<br>|</p>
+                <p><button type="button">Set up event</button></p>
+                <p class="divider">|<br>|<br>|</p>
+                <p><button type="button">Create event flyer</button></p>
+                <p class="divider">|<br>|<br>|</p>
+                <p><button type="button">Judges and Clubs</button></p>
+                <p class="divider">|<br>|<br>|</p>
+                <p>Entries open</p>
+                <p class="divider">|<br>|<br>|</p>
+                <p> <button type="button">Athlete entries</button></p>
+                <p class="divider">|<br>|<br>|</p>
+                <p>Soft entries close</p>
+                <p class="divider">|<br>|<br>|</p>
+                <p> <button type="button">Create sessions</button></p>
+                <p class="divider">|<br>|<br>|</p>
+                <p> <button type="button">Create work order</button></p>
+                <p class="divider">|<br>|<br>|</p>
+                <p>Hard entries close</p>
+                <p class="divider">|<br>|<br>|</p>
+                <p> <button type="button">Create run sheet</button></p>
+                <p class="divider">|<br>|<br>|</p>
+                <p> <button type="button">Create roster</button></p>
+                <p class="divider">|<br>|<br>|</p>
+                <p> <button type="button">Event day</button></p>
+                <p class="divider">|<br>|<br>|</p>
+                <p> <button type="button">Reports</button></p>
+            </div>
+        </menu>
+        <main class="main">
+            <div class="inner-wrap">
+                <h1>Event information</h1>
+                <form class="form-style-10" action="" method="post">
+                    <Label for="Event name">Name of event</Label>
+                        <input type="text" id="eventname" name="eventname" required><br><br>
+                    <Label for="Club or school">Club or School</Label>
+                        <input type="text" id="club" name="club" required><br><br>
+                    <Label for="Address line 1" id="addressline1"></Label>
+                        <input type="text" id="addressline1" name="addressline1" placeholder="Address Line 1" required><br><br>
+                    <Label for="Address line 2" id="addressline2"></Label>
+                        <input type="text" id="addressline2" name="addressline2" placeholder="Address Line 2" ><br><br>
+                    <Label for="City" id="city"></Label>
+                        <input type="text" id="city" name="city" placeholder="City or Town" required><br><br>
+                    <Label for="Postcode or Zipcode" id="postcode"></Label>
+                        <input type="text" id="postcode" name="postcode" placeholder="Postcode/Zip" required><br><br>
+                    <Label for="State or Province" id="state"></label>
+                        <select id="state" name="state" required>
+                            <option value="">State/Province</option>
+                            <option value="ACT">ACT</option>
+                            <option value="NSW">NSW</option>
+                            <option value="NT">NT</option>
+                            <option value="QLD">QLD</option>
+                            <option value="SA">SA</option>
+                            <option value="TAS">TAS</option>
+                            <option value="VIC">VIC</option>
+                            <option value="WA">WA</option>
+                        </select><br><br>
+                    <Label for="Country" id="country"></label>
+                        <select id="country" name="country" required>
+                            <option value="">Country</option>
+                            <option value="AUS">Australia</option>
+                            <option value="CAN">Canada</option>
+                            <option value="NZ">New Zealand</option>
+                            <option value="USA">USA</option>
+                        </select><br><br>
+                    </form><br><br>
+            <h2>Visibility and Access to Event</h2>
+                <form class="form-style-10" action="" method="post">
+                    <input type="radio" id="eventvisibility1" name="eventvisibility" value="Public">Public event<br>
+                    <input type="radio" id="eventvisibility2" name="eventvisibility" value="Invite">Invite/Qualified only<br>
+                    <input type="radio" id="eventvisibility3" name="eventvisibility" value="Private Event">Private event<br>
+                </form><br><br>
+            <h2>Event logo</h2>
+                <form class="form-style-10" action="" method="post">
+                    <Label for="Event logo" id="eventlogo"></Label>
+                    <input type="file" id="eventlogo" name="eventlogo">
+                </form><br><br>
+            <h2>Event details</h2>
+                <form class="form-style-10" action="" method="post">
+                    <Label for="Event date" id="eventdate"></Label>
+                        <input type="date" id="eventdate" name="eventdate"><br><br>
+                    <Label for="Gymsport" id="gymsport"></label>
+                        <select id="gymsport" name="gymsport" required>
+                            <option value="">Gymsport</option>
+                            <option value="WAG">Women's Artistic Gymnastics</option>
+                            <option value="MAG">Men's Artistic Gymnastics</option>
+                        </select><br><br>
+                    <Label for="Athlete representing" id="athrep"></Label>
+                        <select id="athrep" name="athrep" required>
+                            <option value="">Athlete representing</option>
+                            <option value="Club">Club/School</option>
+                            <option value="State">State/Province</option>
+                            <option value="Region">Region</option>
+                            <option value="Country">Country</option>
+                        </select>
+                </form><br><br>
+            <h2>Event Contact</h2>
+                <form class="form-style-10" class="button-section" action="" method="post">
+                    <Label for="Save" id="save"></Label>
+                        <input type="submit" value="Save">
+                </form><br><br>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>Blah blah &copy copyright goes here</p>
+        </footer>
+    </container>
+</body>
+</html>
