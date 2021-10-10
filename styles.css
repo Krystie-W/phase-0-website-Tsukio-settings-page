@@ -214,15 +214,15 @@ h1 {
     font-size: x-large;
 }
 
-.column-1 {
+.inner-wrap .column-1 {
   grid-area: column-1;
 }
 
-.column-2 {
+.inner-wrap .column-2 {
     grid-area: column-2;
   }
 
-.column-3 {
+  .inner-wrap .column-3 {
     grid-area: column-3;
   }
   
