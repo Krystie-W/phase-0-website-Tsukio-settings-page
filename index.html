@@ -8,27 +8,27 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <container class="container">    
+    <div class="container">    
         <nav class="navigation">
             <ul>
                 <li id="logo" class="tooltip"><span class="tooltiptext">Tsukio home</span><a href="#">
-                    <img src="./Tsukio cyclone.PNG" height="35px" width="35px"></a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Settings</a></li>
+                    <img src="./Images/Tsukio-cyclone.PNG" height="35" width="35" alt="Go to Tsukio home page"></a></li>
+                <li class="tooltip"><span class="tooltiptext">Profile</span><a href="#">
+                    <img src="./Images/profile.png" height="30" width="30" alt="Go to my profile"></a></li>
+                <li class="tooltip"><span class="tooltiptext">Settings</span><a href="#">
+                    <img src="./Images/settings-cog.png" height="30" width="30" alt="Go to Settings"></a></li>
             </ul>
         </nav>
-        <tabs class="tabs">
-            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Event information</a>
-                &nbsp &nbsp &nbsp &nbsp<span>|</span> &nbsp &nbsp &nbsp &nbsp
-                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#" role="tab" aria-controls="nav-profile" aria-selected="false">Levels - Divisions - Age groups</a>&nbsp &nbsp &nbsp &nbsp
-                <span>|</span>&nbsp &nbsp &nbsp &nbsp
-                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#" role="tab" aria-controls="nav-contact" aria-selected="false">Other key information</a>
-            </div>
-        </tabs>
-        <menu class="sidebar">
+        <div class="tabs">
+            <ul class="nav-tabs" role="tablist">
+                <li><a class="nav-link active" href="#event-information" role="tab">Event information</a></li>
+                <li><a class="nav-link" href="#" role="tab">Levels - Divisions - Age groups</a></li>
+                <li><a class="nav-link" href="#" role="tab">Teams - Santioning - More</a></li>
+            </ul>
+        </div>
+        <div class="sidebar">
             <div>
-                <!--<img src="./home logo.png" height="20px" width="20px">--> <p id="eventhome">Dashboard</p><br>
+                <!--img src="./Images/home-logo.png" height="20px" width="20px"--> <a id="eventhome" href="#event-dashboard">Dashboard</a><br>
                 <p>Created event</p>
                 <p class="divider">|<br>|<br>|</p>
                 <p><button type="button">Set up event</button></p>
@@ -57,31 +57,31 @@
                 <p class="divider">|<br>|<br>|</p>
                 <p> <button type="button">Reports</button></p>
             </div>
-        </menu>
+        </div>
         <main class="main">
-            <div class="inner-wrap" class="column-1">
+            <div class="inner-wrap column-1">
                 <form class="form-style-10">
                     <h1>Event information</h1>
                     <!--This should be pre-filled with information when the host created the event-->
-                    <Label for="Event name">Name of event</Label> 
+                    <Label for="eventname">Name of event</Label> 
                         <input type="text" id="eventname" name="eventname" placeholder="Name of event to be displayed" required><br><br>
                     <!--This should be pre-filled with information when the host created the event-->
-                        <Label for="Club or school">Club or School</Label> 
+                        <Label for="club">Club or School</Label> 
                         <input type="text" id="club" name="club" placeholder="Location of event" required><br><br>
                     <!--This should be pre-filled with information when the host created the event-->
-                    <Label for="Address Line 1" id="addressline1">Address</Label>
+                    <Label for="addressline1">Address</Label>
                         <input type="text" id="addressline1" name="addressline1" placeholder="Address Line 1" required><br><br> 
                     <!--This should be pre-filled with information when the host created the event-->
-                        <Label for="Address line 2" id="addressline2"></Label>
+                        <Label for="addressline2"></Label>
                         <input type="text" id="addressline2" name="addressline2" placeholder="Address Line 2" ><br><br>
                     <!--This should be pre-filled with information when the host created the event-->
-                        <Label for="City" id="city"></Label>
+                        <Label for="city"></Label>
                         <input type="text" id="city" name="city" placeholder="City or Town" required><br><br>
                     <!--This should be pre-filled with information when the host created the event-->
-                    <Label for="Postcode or Zipcode" id="postcode"></Label>
+                    <Label for="postcode"></Label>
                         <input type="text" id="postcode" name="postcode" placeholder="Postcode/Zip" required><br><br>
                     <!--This should be pre-filled with information when the host created the event.  Options need to change if country changes-->
-                        <Label for="State or Province" id="state"></label>
+                        <Label for="state"></Label>
                         <select id="state" name="state" required>
                             <option value="">--Select state/province--</option>
                             <option value="ACT">ACT</option>
@@ -94,7 +94,7 @@
                             <option value="WA">WA</option>
                         </select><br><br>
                     <!--This should be pre-filled with information when the host created the event-->
-                        <Label for="Country" id="country"></label>
+                        <Label for="country"></label>
                         <select id="country" name="country" required>
                             <option value="">--Select country--</option>
                             <option value="AUS">Australia</option>
@@ -104,31 +104,31 @@
                         </select><br>
                     </form><br>
             </div>
-            <div class="inner-wrap" class="column-2">
+            <div class="inner-wrap column-2">
                 <form class="form-style-10">
                     <h1>Visibility & Access</h1>
-                    <input type="radio" id="eventvisibility1" name="eventvisibility" value="Public">&nbsp Public event<br><br>
-                    <input type="radio" id="eventvisibility2" name="eventvisibility" value="Invite">&nbsp Invite/Qualified only<br><br>
-                    <input type="radio" id="eventvisibility3" name="eventvisibility" value="Private Event">&nbsp Private event<br>
+                    <input type="radio" id="eventvisibility1" name="eventvisibility" value="Public"><span>&nbsp; Public event</span><br><br>
+                    <input type="radio" id="eventvisibility2" name="eventvisibility" value="Invite"><span>&nbsp; Invite/Qualified only</span><br><br>
+                    <input type="radio" id="eventvisibility3" name="eventvisibility" value="Private Event"><span>&nbsp; Private event</span><br>
                 </form>
                 <form class="form-style-10">
                     <h1>Event logo</h1>
                     <!--This should be pre-filled with information when the host created the event-->
-                    <Label for="Event logo" id="eventlogo">Upload a logo to represent your event</Label><br>
+                    <Label for="eventlogo">Upload a logo to represent your event</Label><br>
                     <input type="file" id="eventlogo" name="eventlogo">
                 </form>
                 <form class="form-style-10">
                     <h1 class="column-2">Event details</h1>
                     <!--This should be pre-filled with information when the host created the event-->
-                    <Label for="Event date" id="eventdate">Event date</Label>
+                    <Label for="eventdate">Event date</Label>
                         <input type="date" id="eventdate" name="eventdate"><br>
-                    <Label for="Gymsport" id="gymsport">Gymsport</label>
+                    <Label for="gymsport">Gymsport</label>
                         <select id="gymsport" name="gymsport" required>
                             <option value="">--Select Gymsports--</option>
                             <option value="WAG">Women's Artistic Gymnastics</option>
                             <option value="MAG">Men's Artistic Gymnastics</option>
                         </select><br>
-                    <Label for="Athlete representing" id="athrep">Athletes are representing...</Label>
+                    <Label for="athrep">Athletes are representing...</Label>
                         <select id="athrep" name="athrep" required>
                             <option value="">--Please select--</option>
                             <option value="Club">Club/School</option>
@@ -138,29 +138,29 @@
                         </select>
                 </form><br><br>
             </div>
-            <div class="inner-wrap" class="column-3">
+            <div class="inner-wrap column-3">
                 <form class="form-style-10">
                     <h1>Event Contact</h1>
                     <!--This should be pre-filled with information when the host created the event-->
-                    <Label for="event contact name" id="contactfirstlastname">Contact name</Label>
+                    <Label for="contactfirstlastname">Contact name</Label>
                         <input type="text" id="contactfirstlastname" name="contactfirstlastname" placeholder="Full name" required><br><br> 
                     <!--This should be pre-filled with information when the host created the event-->
-                        <Label for="contact email address" id="contactemail">Contact email</Label>
+                        <Label for="contactemail">Contact email</Label>
                         <input type="email" id="contactemail" name="contactemail" placeholder="Email" ><br><br>
-                        <Label for="First Phone contact" id="contactphone1">Phone Contacts</Label>
-                        <input type="tel" id="contactphone1" name="contactphone1" placeholder="Phone number" required>
-                        <Label for="Second Phone contact" id="contactphone2"></Label>
+                        <Label for="contactphone1">Phone Contacts</Label>
+                        <input type="tel" id="contactphone1" name="contactphone1" placeholder="Phone number" required autocomplete="tel">
+                        <Label for="contactphone2"></Label>
                         <input type="tel" id="contactphone2" name="contactphone2" placeholder="Secondary phone number"><br><br><br>
-                        <Label for="Event website" id="eventwebsite">Event website</Label>
+                        <Label for="eventwebsite">Event website</Label>
                         <input type="url" id="eventwebsite" name="eventwebsite" placeholder="Website address" ><br><br>
-                    <Label for="Save" id="save"></Label>
-                        <input type="submit" value="Save">
+                    <Label for="save"></Label>
+                        <input type="submit" id="save" value="save">
                 </form><br><br>
             </div>
         </main>
         <footer class="footer">
-            <p>&copy Copyright Tsukio 2021</p>
+            <p>&copy; Copyright Tsukio 2021</p>
         </footer>
-    </container>
+    </div>
 </body>
 </html>
